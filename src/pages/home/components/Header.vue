@@ -9,7 +9,7 @@
 		</div>
 		<router-link to='/city'>
 			<div class="header-right">
-				{{this.city}}北京
+				{{this.$store.state.city}}<!--{{this.city}}   //外部传入数据，现在改成前端存储数据-->
 				<span class="iconfont arrow-icon">&#xe64a;</span>
 			</div>
 		</router-link>
@@ -18,10 +18,10 @@
 
 <script>
 	export default {
-		name : 'HomeHeader',
-		props : {
-			city : String
-		}
+		name : 'HomeHeader'
+//		props : {
+//			city : String
+//		}					//外部传入数据，现在改成前端存储数据
 	}
 </script>
 

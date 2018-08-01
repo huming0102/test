@@ -1,6 +1,7 @@
 <template>
 	<div>
-		<home-header :city='city'></home-header>
+		<!--<home-header :city='city'></home-header>		//ajax（外部）传递数据的--> 
+		<home-header></home-header>		<!--//前端存储数据-->
 		<HomeSwiper :list ='swiperList'></HomeSwiper>
 		<HomeIcons></HomeIcons>
 		<HomeRecommend></HomeRecommend>
@@ -27,7 +28,7 @@ import axios from 'axios'
 		},
 		data () {
 			return {
-				city : '',
+				//city : '',	//ajax传递过来的数据。删除city进行前端存储数据
 				swiperList: []
 			}
 		},
@@ -40,8 +41,11 @@ import axios from 'axios'
 				res = res.data
 				if( res.ret && res.data ){
 					const data = res.data
-					this.city = data.city
+					//this.city = data.city			//改成前端存储数据，通过ajax传递过来的city数据都删掉
 					this.swiperList = data.swiperList
+					this.icontList = data.icontList
+					this.recommendList = data.recommendList
+					this.weekendList = data.weekendList
 				}
 			}
 		},
