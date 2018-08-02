@@ -50,7 +50,8 @@
 		color: #ccc
 			
 	.header-right
-		width: 1.24rem
+		min-width: 1.04rem
+		padding: 0 .1rem
 		float: left
 		text-align: center
 		color:#fff
