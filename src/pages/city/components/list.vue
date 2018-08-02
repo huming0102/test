@@ -40,7 +40,7 @@
 			letter : String
 		},
 		methods: {
-			handleCityClick () {
+			handleCityClick (city) {
 				this.$store.commit('changeCity',city)
 				//alert(city)
 				this.$router.push('/')
