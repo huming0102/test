@@ -43,6 +43,9 @@
 		activated () {
 			//console.log(111)
 			window.addEventListener('scroll', this.handleScroll)
+		},
+		deactivated () {
+			window.removeEventListener('scroll', this.handleScroll)	//解绑scroll
 		}
 	}
 </script>
